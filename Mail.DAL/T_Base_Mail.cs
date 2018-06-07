@@ -91,5 +91,27 @@ namespace Mail.DAL
             return lst;
         }
 
+        public List<Model.T_Base_Mail> GetOutList()
+        {
+            SqlConnection co = new SqlConnection();
+            co.ConnectionString = connstring;
+            co.Open();
+            SqlCommand cm = new SqlCommand();
+
+            cm.Connection = co;
+            cm.CommandText = "select T_Base_Mail.Id from T_Base_Mail,T_Base_Mail_Type where T_Base_Mail.typeId = T_Base_Mail_Type.Id AND DATEADD(DD,Overtime,enteringTime) <　GETDATE();";
+            SqlDataReader dr = cm.ExecuteReader();
+            List<Mail.Model.T_Base_Mail> lst = new List<Model.T_Base_Mail>();
+            while (dr.Read())
+            {
+                Mail.Model.T_Base_Mail item = new Model.T_Base_Mail();
+                item.Id = Convert.ToInt32(dr["Id"]);
+                lst.Add(item);
+            }
+            dr.Close();
+            co.Close();
+            return lst;
+        }
+
     }
 }

@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="aliyun-net-sdk-core">
+      <HintPath>..\dysmsapi_demo_sdk__net\net\api_demo\aliyun-net-sdk-core.dll</HintPath>
+    </Reference>
+    <Reference Include="aliyun-net-sdk-dysmsapi">
+      <HintPath>..\dysmsapi_demo_sdk__net\net\api_demo\aliyun-net-sdk-dysmsapi.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SendMessage.cs" />
     <Compile Include="T_Base_Mail.cs" />
     <Compile Include="T_Base_Mail_Type.cs" />
     <Compile Include="T_Base_Recipient.cs" />
