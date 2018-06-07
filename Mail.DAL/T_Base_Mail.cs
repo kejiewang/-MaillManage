@@ -10,7 +10,7 @@ namespace Mail.DAL
     /// <summary>
     /// 邮件
     /// </summary>
-    class T_Base_Mail
+    public class T_Base_Mail
     {
         public string connstring = "server=10.132.239.3;uid=sa;pwd=Jsj123456;database=15211160113Mail";
         public int Add(Mail.Model.T_Base_Mail item)

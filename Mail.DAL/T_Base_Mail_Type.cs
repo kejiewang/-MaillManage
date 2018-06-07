@@ -12,7 +12,7 @@ namespace Mail.DAL
     /// kojewang
     /// 邮件的类型管理
     /// </summary>
-    class T_Base_Mail_Type
+    public class T_Base_Mail_Type
     {
         public string connstring = "server=10.132.239.3;uid=sa;pwd=Jsj123456;database=15211160113Mail";
         public int Add(Mail.Model.T_Base_Mail_Type item)

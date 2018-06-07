@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace Mail.DAL
 {
-    class T_Base_Recipient
+    public class T_Base_Recipient
     {
         public string connstring = "server=10.132.239.3;uid=sa;pwd=Jsj123456;database=15211160113Mail";
         /// <summary>
